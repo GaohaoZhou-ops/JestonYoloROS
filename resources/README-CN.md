@@ -1,4 +1,4 @@
-# Jeston Yolo ROS
+# Jetson Yolo ROS
 
 这个包是在 `Nvidia Orin` 上运行 Yolov11 模型，包含了五个基础功能节点：目标检测、语意分割、图像分类、姿态估计、OBB计算。
 
@@ -124,7 +124,7 @@ $ python -c "import torch; print(f'CUDA available: {torch.cuda.is_available()}')
 
 ```bash
 $ cd detect_ws/src
-$ git clone --recursive https://github.com/GaohaoZhou-ops/JestonYoloROS.git
+$ git clone --recursive https://github.com/GaohaoZhou-ops/JetsonYoloROS.git
 ```
 
 ## 2.2 修改 realsense-ros 源码
@@ -132,7 +132,7 @@ $ git clone --recursive https://github.com/GaohaoZhou-ops/JestonYoloROS.git
 为了能充分利用 OpenCV-CUDA 的加速潜能，需要对 realsense-ros 中的部分源码进行修改：
 
 ```bash
-$ cd detect_ws/src/JestonYoloROS/realsense-ros
+$ cd detect_ws/src/JetsonYoloROS/realsense-ros
 $ git checkout ros1-legacy
 $ cd realsense2_camera
 ```
@@ -209,11 +209,11 @@ $ chmod +x src/yolo_detect/scripts/*
 ---
 # Step3. 获取模型
 
-这里提供了两种方式获取适配 Jeston 设备平台的模型，你可以通过网盘下载可以就地编译，但推荐使用第二种就地编译方法，因为这样可以发挥出硬件加速的最佳性能。
+这里提供了两种方式获取适配 Jetson 设备平台的模型，你可以通过网盘下载可以就地编译，但推荐使用第二种就地编译方法，因为这样可以发挥出硬件加速的最佳性能。
 
 ## 3.1 [快速] 网盘下载
 
-打开下面的链接找到你对应设备的模型，当前仅支持 `Jeston AGX Orin 64 GB DK` 硬件，后期会逐步添加 Jeston 其他平台的模型文件：
+打开下面的链接找到你对应设备的模型，当前仅支持 `Jetson AGX Orin 64 GB DK` 硬件，后期会逐步添加 Jetson 其他平台的模型文件：
 
 
 ```txt

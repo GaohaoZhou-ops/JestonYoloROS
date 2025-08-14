@@ -1,4 +1,4 @@
-# Jeston Yolo ROS
+# Jetson Yolo ROS
 
 This package runs the Yolov11 model on `Nvidia Orin` and includes five basic function nodes: target detection, semantic segmentation, image classification, pose estimation, and OBB calculation.
 
@@ -123,7 +123,7 @@ First, enter your ROS workspace, assuming it's `detect_ws`:
 
 ```bash
 $ cd detect_ws/src
-$ git clone --recursive https://github.com/GaohaoZhou-ops/JestonYoloROS.git
+$ git clone --recursive https://github.com/GaohaoZhou-ops/JetsonYoloROS.git
 ```
 
 ## 2.2 Modifying the realsense-ros Source Code
@@ -132,7 +132,7 @@ To fully utilize the acceleration potential of OpenCV-CUDA, some source code in 
 
 
 ```bash
-$ cd detect_ws/src/JestonYoloROS/realsense-ros
+$ cd detect_ws/src/JetsonYoloROS/realsense-ros
 $ git checkout ros1-legacy
 $ cd realsense2_camera
 ```
@@ -212,11 +212,11 @@ $ chmod +x src/yolo_detect/scripts/*
 ---
 # Step 3. Obtain the Model
 
-Two methods are provided for obtaining models compatible with the Jeston device platform. You can download from a network drive or compile locally, but the second method, local compilation, is recommended as it maximizes hardware acceleration performance.
+Two methods are provided for obtaining models compatible with the Jetson device platform. You can download from a network drive or compile locally, but the second method, local compilation, is recommended as it maximizes hardware acceleration performance.
 
 ## 3.1 [Quick] Download from a Network Drive
 
-Open the following link to find the model for your device. Currently, only the Jeston AGX Orin 64GB DK hardware is supported. Model files for other Jeston platforms will be added in the future:
+Open the following link to find the model for your device. Currently, only the Jetson AGX Orin 64GB DK hardware is supported. Model files for other Jetson platforms will be added in the future:
 
 ```txt
 https://pan.baidu.com/s/1pxzS423gZaWbsfSmpQGrsQ?pwd=24wj
